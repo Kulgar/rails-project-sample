@@ -1,0 +1,33 @@
+<h1>Listing saved_games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Image 1</th>
+      <th>Image 2</th>
+      <th>Image 3</th>
+      <th>Image 4</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saved_games.each do |saved_game| %>
+      <tr>
+        <td><%= saved_game.user_id %></td>
+        <td><%= saved_game.image_1 %></td>
+        <td><%= saved_game.image_2 %></td>
+        <td><%= saved_game.image_3 %></td>
+        <td><%= saved_game.image_4 %></td>
+        <td><%= link_to 'Show', saved_game %></td>
+        <td><%= link_to 'Edit', edit_saved_game_path(saved_game) %></td>
+        <td><%= link_to 'Destroy', saved_game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saved game', new_saved_game_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @saved_game.user_id %>
+</p>
+
+<p>
+  <strong>Image 1:</strong>
+  <%= @saved_game.image_1 %>
+</p>
+
+<p>
+  <strong>Image 2:</strong>
+  <%= @saved_game.image_2 %>
+</p>
+
+<p>
+  <strong>Image 3:</strong>
+  <%= @saved_game.image_3 %>
+</p>
+
+<p>
+  <strong>Image 4:</strong>
+  <%= @saved_game.image_4 %>
+</p>
+
+<%= link_to 'Edit', edit_saved_game_path(@saved_game) %> |
+<%= link_to 'Back', saved_games_path %>
